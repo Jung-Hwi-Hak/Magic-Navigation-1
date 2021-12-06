@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>원 메뉴바</title>
+  <!-- google -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- css link -->
+  <link rel="stylesheet" href="./css/index.css">
+
+
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="list">
+        <a href="#">
+          <span class="material-icons">home</span>
+          <span class="text">Home</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="material-icons">person</span>
+          <span class="text">Profile</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="material-icons">email</span>
+          <span class="text">Message</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="material-icons">photo_camera</span>
+          <span class="text">Photos</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="material-icons">settings</span>
+          <span class="text">Settings</span>
+        </a>
+      </li>
+      <div class="indicator"></div>
+    </ul>
+  </nav>
+
+  <script>
+    const list = document.querySelectorAll('li');
+    function activeLink(){
+      list.forEach((item) =>
+        item.classList.remove('active'));
+        this.classList.add('active');
+    }
+
+    list.forEach((item)=>
+    item.addEventListener('click',activeLink));
+  </script>
+  
+  <!-- 왜 이렇게는 안되는걸까? -->
+  <!-- <script>
+    const list = document.querySelectorAll('li');
+    list.forEach((item) =>
+    item.classList.remove('active');
+    item.onclick = ()=>{
+    item.classList.add('active');
+    })
+  </script> -->
+</body>
+</html>
